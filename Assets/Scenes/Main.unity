@@ -432,6 +432,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerScript: {fileID: 1362344063}
+  <MaxSpeed>k__BackingField: 30
+  <Acceleration>k__BackingField: 60
+  <Deceleration>k__BackingField: 10
+  <DecelerateStop>k__BackingField: 0.05
+  <ClampX>k__BackingField: 5
 --- !u!114 &1362344061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f36740efa730f324fa7d3e0d6804babe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <PlayerInput>k__BackingField: {fileID: 1362344061}
+  <PlayerMovement>k__BackingField: {fileID: 1362344060}
+  <PlayerCollision>k__BackingField: {fileID: 1362344062}
 --- !u!1 &1515176288
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,27 +11,34 @@ public class PlayerInput : MonoBehaviour
     [SerializeField]
     private Player _playerScript;
 
-    internal bool isLeftPressed { get; private set; }
-    internal bool isRightPressed { get; private set; }
+    internal bool IsLeftPressed { get; private set; }
+    internal bool IsRightPressed { get; private set; }
 
-    // Update is called once per frame
+    void Start()
+    {
+        IsLeftPressed = false;
+        IsRightPressed = false;
+    }
+
     void Update()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            isLeftPressed = true;
+            print("Left Pressed");
+            IsLeftPressed = true;
         }
         else
         {
-            isLeftPressed = false;
+            IsLeftPressed = false;
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            isRightPressed = true;
+            print("Right pressed");
+            IsRightPressed = true;
         }
         else
         {
-            isRightPressed = false;
+            IsRightPressed = false;
         }
     }
 }
